@@ -10,4 +10,9 @@ class AllText {
   static const serum = 'Сыворотка';
   static const serumDescription = 'HA EYE & NECK SERUM';
   static const goToPromotion = 'Перейти к акции';
+  static const sets = 'Наборы';
+  static const forFace = 'Для лица';
+  static const forEyes = 'Для глаз';
+  static const forBody = 'Для тела';
+  static const washing = 'Умывание';
 }
