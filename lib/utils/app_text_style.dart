@@ -28,18 +28,24 @@ class AppTextStyles {
     fontSize: 20,
     color: Colors.white,
   );
+  static const raleway600 = TextStyle(
+    fontFamily: 'raleway',
+    fontWeight: FontWeight.w600,
+    fontSize: 12,
+    color: Colors.white,
+  );
 
   static const raleway500 = TextStyle(
     fontFamily: 'raleway',
     fontWeight: FontWeight.w500,
-    fontSize: 16,
+    fontSize: 10,
     color: Colors.white,
   );
 
   static const velaSans600 = TextStyle(
     fontFamily: 'vela-sans',
     fontWeight: FontWeight.w600,
-    fontSize: 22,
+    fontSize: 35.05,
     color: Colors.white,
   );
 
