@@ -17,4 +17,11 @@ class AllText {
   static const washing = 'Умывание';
   static const toner = 'Тоник';
   static const newProduct = 'Новинки';
+  static const myScheme = 'Моя схема домашнего ухода';
+  static const demakage = 'Демакияж';
+  static const cleansing = 'Очищение';
+  static const dayCream = 'Дневной крем';
+  static const answerQuestion =
+      'Ответьте на 10 вопросов, и мы подберем нужный уход';
+  static const takeTest = 'Пройти тест';
 }

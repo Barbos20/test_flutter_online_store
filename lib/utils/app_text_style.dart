@@ -24,8 +24,8 @@ class AppTextStyles {
   static const raleway700 = TextStyle(
     fontFamily: 'raleway',
     fontWeight: FontWeight.w700,
-    fontSize: 20,
-    color: Colors.white,
+    fontSize: 16,
+    color: Colors.black,
   );
   static const raleway600 = TextStyle(
     fontFamily: 'raleway',
