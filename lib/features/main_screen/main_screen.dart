@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_online_store/features/main_screen/widgets/compilations.dart';
+import 'package:test_online_store/features/main_screen/widgets/new_product.dart';
 import 'package:test_online_store/features/main_screen/widgets/offer_widget.dart';
+import 'package:test_online_store/utils/all_text.dart';
+import 'package:test_online_store/utils/data.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,11 +16,20 @@ class _MyHomePageState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const ClampingScrollPhysics(),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const OfferWidget(),
           const SizedBox(height: 25),
-          Compilations(),
+          const Compilations(),
+          const SizedBox(height: 32),
+          NewProduct(
+            title: AllText.newProduct,
+            stripColorStart: const Color(0xffE4FEF9),
+            stripColorEnd: const Color(0xff66F6DC),
+            products: Data.newProductsList,
+          ),
         ],
       ),
     );

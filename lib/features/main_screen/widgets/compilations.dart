@@ -1,62 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:test_online_store/features/main_screen/models/compilation.dart';
-import 'package:test_online_store/utils/all_text.dart';
-import 'package:test_online_store/utils/assets_pictures.dart';
+import 'package:test_online_store/utils/app_text_style.dart';
+import 'package:test_online_store/utils/data.dart';
 
 class Compilations extends StatelessWidget {
-  Compilations({super.key});
-
-  final List<Compilation> _compilationList = [
-    const Compilation(
-      picture: AssetsPictures.cremePink,
-      nameProduct: AllText.sets,
-    ),
-    const Compilation(
-      picture: AssetsPictures.forFace,
-      nameProduct: AllText.forFace,
-    ),
-    const Compilation(
-      picture: AssetsPictures.cremeBlue,
-      nameProduct: AllText.forEyes,
-    ),
-    const Compilation(
-      picture: AssetsPictures.forBody,
-      nameProduct: AllText.forBody,
-    ),
-    const Compilation(
-      picture: AssetsPictures.cremePink,
-      nameProduct: AllText.washing,
-    ),
-    const Compilation(
-      picture: AssetsPictures.cremeBlue,
-      nameProduct: AllText.forEyes,
-    ),
-    const Compilation(
-      picture: AssetsPictures.cremePink,
-      nameProduct: AllText.washing,
-    ),
-  ];
+  const Compilations({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const double currentPaddingBetweenItems = 6;
-    const double firstLastItemPadding = 12;
+    const double _currentPaddingBetweenItems = 6;
+    const double _firstLastItemPadding = 12;
+    final _compilations = Data.compilationList;
 
     return SizedBox(
       height: 100,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: _compilationList.length,
+        itemCount: _compilations.length,
         itemBuilder: (context, index) {
-          final compilation = _compilationList[index];
+          final compilation = _compilations[index];
           return Padding(
             padding: EdgeInsets.only(
               left: index == 0
-                  ? firstLastItemPadding
-                  : currentPaddingBetweenItems,
-              right: index == _compilationList.length - 1
-                  ? firstLastItemPadding
-                  : currentPaddingBetweenItems,
+                  ? _firstLastItemPadding
+                  : _currentPaddingBetweenItems,
+              right: index == _compilations.length - 1
+                  ? _firstLastItemPadding
+                  : _currentPaddingBetweenItems,
             ),
             child: InkWell(
               onTap: () {},
@@ -70,6 +39,7 @@ class Compilations extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     compilation.nameProduct,
+                    style: AppTextStyles.inter500,
                   )
                 ],
               ),

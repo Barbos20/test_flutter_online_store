@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_online_store/features/main_screen/models/product.dart';
 import 'package:test_online_store/utils/all_text.dart';
 import 'package:test_online_store/utils/app_text_style.dart';
-import 'package:test_online_store/utils/assets_pictures.dart';
+import 'package:test_online_store/utils/data.dart';
 
 class OfferWidget extends StatefulWidget {
   const OfferWidget({
@@ -17,27 +16,6 @@ class OfferWidgetState extends State<OfferWidget> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
 
-  final List<Product> _productList = [
-    Product(
-      picture: AssetsPictures.headLogo,
-      offerDescription: AllText.discount(15),
-      nameProduct: AllText.serum,
-      productDescription: AllText.serumDescription,
-    ),
-    Product(
-      picture: AssetsPictures.headLogo,
-      offerDescription: AllText.discount(15),
-      nameProduct: AllText.serum,
-      productDescription: AllText.serumDescription,
-    ),
-    Product(
-      picture: AssetsPictures.headLogo,
-      offerDescription: AllText.discount(15),
-      nameProduct: AllText.serum,
-      productDescription: AllText.serumDescription,
-    ),
-  ];
-
   @override
   void dispose() {
     _pageController.dispose();
@@ -46,6 +24,7 @@ class OfferWidgetState extends State<OfferWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final products = Data.productList;
     return Stack(
       children: [
         SizedBox(
@@ -59,9 +38,9 @@ class OfferWidgetState extends State<OfferWidget> {
             },
             scrollDirection: Axis.horizontal,
             physics: const ClampingScrollPhysics(),
-            itemCount: _productList.length,
+            itemCount: products.length,
             itemBuilder: (context, index) {
-              final product = _productList[index];
+              final product = products[index];
               return Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
@@ -161,7 +140,7 @@ class OfferWidgetState extends State<OfferWidget> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: List.generate(
-              _productList.length,
+              products.length,
               (index) => Container(
                 margin: const EdgeInsets.symmetric(horizontal: 4.0),
                 width: 8,
