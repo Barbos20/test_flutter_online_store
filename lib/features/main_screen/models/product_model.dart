@@ -6,7 +6,7 @@ class ProductModel {
   final String? offerDescription;
   final int? promotionPrice;
   final int? correctPrice;
-  final String? doubleOffer = '1+1';
+  final String? doubleOffer;
 
   const ProductModel({
     required this.picture,
@@ -16,5 +16,6 @@ class ProductModel {
     this.offerDescription,
     this.promotionPrice,
     this.correctPrice,
+    this.doubleOffer,
   });
 }

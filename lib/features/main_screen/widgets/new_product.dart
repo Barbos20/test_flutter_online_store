@@ -27,6 +27,15 @@ class NewProduct extends StatelessWidget {
     return priceString;
   }
 
+  double calculateTextWidth(String text, TextStyle style) {
+    final TextPainter textPainter = TextPainter(
+      text: TextSpan(text: text, style: style),
+      maxLines: 1,
+      textDirection: TextDirection.ltr,
+    )..layout();
+    return textPainter.width;
+  }
+
   @override
   Widget build(BuildContext context) {
     const double _currentPaddingBetweenItems = 6;
@@ -68,6 +77,10 @@ class NewProduct extends StatelessWidget {
             itemCount: products.length,
             itemBuilder: (context, index) {
               final product = products[index];
+              final String priceText =
+                  '${formatPrice((product.promotionPrice ?? product.correctPrice) ?? 0).toString()} ₽';
+              final double textWidth =
+                  calculateTextWidth(priceText, AppTextStyles.montserrat600);
               return Container(
                 width: 161,
                 padding: EdgeInsets.only(
@@ -81,22 +94,50 @@ class NewProduct extends StatelessWidget {
                 ),
                 child: InkWell(
                   onTap: () {},
+                  borderRadius: BorderRadius.circular(15),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Container(
-                        height: 188,
-                        width: 161,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffF4F4F4),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Image.asset(
-                          product.picture,
-                          height: 72,
-                          width: 72,
-                        ),
+                      Stack(
+                        children: [
+                          Container(
+                            height: 188,
+                            width: 161,
+                            decoration: BoxDecoration(
+                              color: const Color(0xffF4F4F4),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Image.asset(
+                              product.picture,
+                              height: 72,
+                              width: 72,
+                            ),
+                          ),
+                          if (product.promotionPicture != null)
+                            Positioned(
+                              top: 8,
+                              right: 8,
+                              child: Image.asset(
+                                product.promotionPicture!,
+                                height: 25,
+                                width: 25,
+                              ),
+                            ),
+                          if (product.doubleOffer != null)
+                            Positioned(
+                              top: 44,
+                              right: 8,
+                              child: Text(
+                                product.doubleOffer!,
+                                style: AppTextStyles.montserrat600.copyWith(
+                                  color: const Color(0xffF47DDA),
+                                ),
+                              ),
+                            ),
+                        ],
                       ),
+                      const SizedBox(height: 7),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -116,9 +157,34 @@ class NewProduct extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          Text(
-                            '${formatPrice(product.correctPrice ?? 0).toString()} ₽',
-                            style: AppTextStyles.montserrat600,
+                          SizedBox(
+                            width: double.infinity,
+                            child: Stack(
+                              children: [
+                                Text(
+                                  priceText,
+                                  style: AppTextStyles.montserrat600,
+                                ),
+                                if (product.promotionPrice != null)
+                                  Positioned(
+                                    left: textWidth + 10,
+                                    child: Text(
+                                      '${formatPrice(product.correctPrice ?? 0).toString()} ₽',
+                                      style:
+                                          AppTextStyles.montserrat600.copyWith(
+                                        color: const Color(
+                                          0xff00000033,
+                                        ).withOpacity(0.2),
+                                        decoration: TextDecoration.lineThrough,
+                                        decorationColor: const Color(
+                                          0xff00000033,
+                                        ).withOpacity(0.2),
+                                        decorationThickness: 2,
+                                      ),
+                                    ),
+                                  )
+                              ],
+                            ),
                           ),
                         ],
                       )

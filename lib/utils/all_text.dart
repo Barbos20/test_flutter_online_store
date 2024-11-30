@@ -24,4 +24,8 @@ class AllText {
   static const answerQuestion =
       'Ответьте на 10 вопросов, и мы подберем нужный уход';
   static const takeTest = 'Пройти тест';
+  static const promotions = 'Акции';
+  static const hits = 'Хиты';
+  static const cream = 'Крем';
+  static const lighteningMask = 'Осветляющая маска';
 }
