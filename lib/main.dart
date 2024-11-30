@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:test_online_store/utils/all_text.dart';
 import 'package:test_online_store/features/basket_screen/basket_screen.dart';
 import 'package:test_online_store/features/catalog_screen/catalog_screen.dart';
@@ -8,7 +9,12 @@ import 'package:test_online_store/utils/app_text_style.dart';
 import 'package:test_online_store/utils/assets_pictures.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]).then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatefulWidget {

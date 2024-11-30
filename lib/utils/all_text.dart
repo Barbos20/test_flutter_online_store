@@ -28,4 +28,8 @@ class AllText {
   static const hits = 'Хиты';
   static const cream = 'Крем';
   static const lighteningMask = 'Осветляющая маска';
+  static const forCleansing = 'Для очищения';
+  static const forMoisturizing = 'Для увлажнения';
+  static const forNourish = 'Для питания';
+  static const forRejuvenation = 'Для омоложения';
 }
