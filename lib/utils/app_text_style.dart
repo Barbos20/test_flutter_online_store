@@ -4,8 +4,7 @@ class AppTextStyles {
   static const inter500 = TextStyle(
     fontFamily: 'inter',
     fontWeight: FontWeight.w500,
-    fontSize: 16,
-    color: Colors.white,
+    fontSize: 12,
   );
 
   static const montserrat500 = TextStyle(
@@ -18,8 +17,8 @@ class AppTextStyles {
   static const montserrat600 = TextStyle(
     fontFamily: 'montserrat',
     fontWeight: FontWeight.w600,
-    fontSize: 18,
-    color: Colors.white,
+    fontSize: 16,
+    color: Colors.black,
   );
 
   static const raleway700 = TextStyle(

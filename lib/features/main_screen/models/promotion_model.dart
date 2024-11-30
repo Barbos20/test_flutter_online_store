@@ -1,10 +1,10 @@
-class Product {
+class PromotionModel {
   final String picture;
   final String offerDescription;
   final String nameProduct;
   final String productDescription;
 
-  const Product({
+  const PromotionModel({
     required this.picture,
     required this.offerDescription,
     required this.nameProduct,

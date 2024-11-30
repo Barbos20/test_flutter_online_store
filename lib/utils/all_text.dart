@@ -15,4 +15,6 @@ class AllText {
   static const forEyes = 'Для глаз';
   static const forBody = 'Для тела';
   static const washing = 'Умывание';
+  static const toner = 'Тоник';
+  static const newProduct = 'Новинки';
 }

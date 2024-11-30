@@ -8,4 +8,9 @@ class AssetsPictures {
   static const forFace = 'assets/pictures/face.png';
   static const cremeBlue = 'assets/pictures/creme_blue.png';
   static const cremePink = 'assets/pictures/creme_pink.png';
+  static const promotion = 'assets/pictures/promotion.png';
+  static const cremePink1 = 'assets/pictures/creme_pink/cremePink1.png';
+  static const cremePink2 = 'assets/pictures/creme_pink/cremePink2.png';
+  static const cremeGreen1 = 'assets/pictures/creme_green/cremeGreen1.png';
+  static const cremeGreen2 = 'assets/pictures/creme_green/cremeGreen2.png';
 }
