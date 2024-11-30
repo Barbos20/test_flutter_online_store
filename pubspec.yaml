@@ -47,15 +47,19 @@ flutter:
     - assets/icons/ShoppingCartSimple.png
     - assets/icons/User.png
     - assets/pictures/body.png
-    - assets/pictures/creme_blue.png
-    - assets/pictures/creme_pink.png
+    - assets/pictures/cream_blue.png
+    - assets/pictures/cream_pink.png
     - assets/pictures/face.png
     - assets/pictures/headLogo.png
     - assets/pictures/promotion.png
     - assets/pictures/background/background.png
-    - assets/pictures/creme_green/cremeGreen1.png
-    - assets/pictures/creme_green/cremeGreen2.png
-    - assets/pictures/creme_pink/cremePink1.png
-    - assets/pictures/creme_pink/cremePink2.png
-    - assets/pictures/creme_red/cremeRed1.png
-    - assets/pictures/creme_red/cremeRed2.png
+    - assets/pictures/cream_green/creamGreen1.png
+    - assets/pictures/cream_green/creamGreen2.png
+    - assets/pictures/cream_pink/creamPink1.png
+    - assets/pictures/cream_pink/creamPink2.png
+    - assets/pictures/cream_red/creamRed1.png
+    - assets/pictures/cream_red/creamRed2.png
+    - assets/pictures/shadow_cream/cleansing.png
+    - assets/pictures/shadow_cream/day_cream.png
+    - assets/pictures/shadow_cream/demakage.png
+    - assets/pictures/shadow_cream/serum.png

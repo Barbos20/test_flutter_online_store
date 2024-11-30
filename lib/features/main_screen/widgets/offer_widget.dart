@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_online_store/features/widgets/custom_button.dart';
 import 'package:test_online_store/utils/all_text.dart';
 import 'package:test_online_store/utils/app_text_style.dart';
 import 'package:test_online_store/utils/data.dart';
@@ -85,7 +86,7 @@ class OfferWidgetState extends State<OfferWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                product.offerDescription,
+                                product.offerDescription ?? '',
                                 style: AppTextStyles.velaSans600,
                               ),
                               Text(
@@ -93,38 +94,21 @@ class OfferWidgetState extends State<OfferWidget> {
                                 style: AppTextStyles.velaSans400,
                               ),
                               Text(
-                                product.productDescription,
+                                product.productDescription ?? '',
                                 style: AppTextStyles.velaSans400,
                               ),
                             ],
                           ),
-                          InkWell(
+                          CustomButton(
                             onTap: () {},
-                            child: Container(
-                              width: 120,
-                              height: 36,
-                              margin: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 11,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                border: Border.all(
-                                  color: Colors.white,
-                                  width: 1,
-                                ),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(3),
-                                ),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  AllText.goToPromotion,
-                                  style: AppTextStyles.raleway600,
-                                ),
-                              ),
-                            ),
-                          )
+                            buttonWidth: 120,
+                            buttonHeight: 36,
+                            fillColor: Colors.transparent,
+                            borderColor: Colors.white,
+                            borderRadius: 3,
+                            title: AllText.goToPromotion,
+                            textStyle: AppTextStyles.raleway600,
+                          ),
                         ],
                       ),
                     ),

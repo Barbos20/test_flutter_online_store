@@ -109,7 +109,7 @@ class NewProduct extends StatelessWidget {
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            product.productDescription,
+                            product.productDescription ?? '',
                             style: AppTextStyles.raleway600.copyWith(
                               color: Colors.black,
                               fontSize: 14,
@@ -117,7 +117,7 @@ class NewProduct extends StatelessWidget {
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            '${formatPrice(product.correctPrice).toString()} ₽',
+                            '${formatPrice(product.correctPrice ?? 0).toString()} ₽',
                             style: AppTextStyles.montserrat600,
                           ),
                         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_online_store/features/main_screen/widgets/compilations.dart';
+import 'package:test_online_store/features/main_screen/widgets/home_care_scheme.dart';
 import 'package:test_online_store/features/main_screen/widgets/new_product.dart';
 import 'package:test_online_store/features/main_screen/widgets/offer_widget.dart';
 import 'package:test_online_store/utils/all_text.dart';
@@ -30,6 +31,8 @@ class _MyHomePageState extends State<MainScreen> {
             stripColorEnd: const Color(0xff66F6DC),
             products: Data.newProductsList,
           ),
+          const SizedBox(height: 40.53),
+          HomeCareScheme(),
         ],
       ),
     );
