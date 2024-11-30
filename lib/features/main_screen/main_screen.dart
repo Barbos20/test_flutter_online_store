@@ -32,7 +32,21 @@ class _MyHomePageState extends State<MainScreen> {
             products: Data.newProductsList,
           ),
           const SizedBox(height: 40.53),
-          HomeCareScheme(),
+          const HomeCareScheme(),
+          const SizedBox(height: 24),
+          NewProduct(
+            title: AllText.promotions,
+            stripColorStart: const Color(0xffFFC0E1),
+            stripColorEnd: const Color(0xffF02980),
+            products: Data.promotionsProductsList,
+          ),
+          const SizedBox(height: 24),
+          NewProduct(
+            title: AllText.hits,
+            stripColorStart: const Color(0xffF86614),
+            stripColorEnd: const Color(0xffFCBC5C),
+            products: Data.hitsProductsList,
+          ),
         ],
       ),
     );

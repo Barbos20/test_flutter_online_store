@@ -61,6 +61,7 @@ class HomeCareScheme extends StatelessWidget {
                     ),
                     child: InkWell(
                       onTap: () {},
+                      borderRadius: BorderRadius.circular(15),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

@@ -14,6 +14,8 @@ class AssetsPictures {
   static const creamPink2 = 'assets/pictures/cream_pink/creamPink2.png';
   static const creamGreen1 = 'assets/pictures/cream_green/creamGreen1.png';
   static const creamGreen2 = 'assets/pictures/cream_green/creamGreen2.png';
+  static const creamRed1 = 'assets/pictures/cream_red/creamRed1.png';
+  static const creamRed2 = 'assets/pictures/cream_red/creamRed2.png';
   static const cleansing = 'assets/pictures/shadow_cream/cleansing.png';
   static const day_cream = 'assets/pictures/shadow_cream/day_cream.png';
   static const demakage = 'assets/pictures/shadow_cream/demakage.png';

@@ -89,6 +89,84 @@ class Data {
     ),
   ];
 
+  static final List<ProductModel> promotionsProductsList = [
+    const ProductModel(
+      picture: AssetsPictures.creamPink1,
+      promotionPicture: AssetsPictures.promotion,
+      nameProduct: AllText.serum,
+      productDescription: 'Unstress Total Serenity Serum',
+      promotionPrice: 10195,
+      correctPrice: 10195,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamPink2,
+      promotionPicture: AssetsPictures.promotion,
+      nameProduct: AllText.cream,
+      productDescription: 'Unstress Revitalizing Toner',
+      promotionPrice: 1595,
+      correctPrice: 3195,
+      doubleOffer: '1+1',
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamPink1,
+      promotionPicture: AssetsPictures.promotion,
+      nameProduct: AllText.serum,
+      productDescription: 'Unstress Total Serenity Serum',
+      promotionPrice: 10999,
+      correctPrice: 14083,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamPink2,
+      promotionPicture: AssetsPictures.promotion,
+      nameProduct: AllText.cream,
+      productDescription: 'Unstress Revitalizing Toner',
+      promotionPrice: 2099,
+      correctPrice: 4079,
+      doubleOffer: '1+1',
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamPink1,
+      promotionPicture: AssetsPictures.promotion,
+      nameProduct: AllText.serum,
+      productDescription: 'Unstress Total Serenity Serum',
+      promotionPrice: 8624,
+      correctPrice: 9999,
+    ),
+  ];
+
+  static final List<ProductModel> hitsProductsList = [
+    const ProductModel(
+      picture: AssetsPictures.creamRed1,
+      nameProduct: AllText.serum,
+      productDescription: 'Forever Young- TotalRenewal Serum',
+      correctPrice: 10195,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamRed2,
+      nameProduct: AllText.lighteningMask,
+      productDescription: 'Illustious Mask',
+      correctPrice: 1596,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamRed1,
+      nameProduct: AllText.serum,
+      productDescription: 'Forever Young- TotalRenewal Serum',
+      correctPrice: 3083,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamRed2,
+      nameProduct: AllText.lighteningMask,
+      productDescription: 'Illustious Mask',
+      correctPrice: 5719,
+    ),
+    const ProductModel(
+      picture: AssetsPictures.creamRed1,
+      nameProduct: AllText.serum,
+      productDescription: 'Forever Young- TotalRenewal Serum',
+      correctPrice: 2970,
+    ),
+  ];
+
   static const List<ProductModel> homeShcemetList = [
     ProductModel(
       picture: AssetsPictures.demakage,
