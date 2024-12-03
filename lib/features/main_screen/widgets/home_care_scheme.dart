@@ -65,18 +65,20 @@ class HomeCareScheme extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
+                          Ink(
                             width: 81,
                             height: 75,
-                            alignment: Alignment.bottomCenter,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 5),
-                              child: Image.asset(
-                                product.picture,
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 5),
+                                child: Image.asset(
+                                  product.picture,
+                                ),
                               ),
                             ),
                           ),
