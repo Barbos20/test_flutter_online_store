@@ -50,6 +50,7 @@ class _MyHomePageState extends State<MainScreen> {
             stripColorEnd: const Color(0xffFCBC5C),
             products: Data.hitsProductsList,
           ),
+          const SizedBox(height: 50),
         ],
       ),
     );

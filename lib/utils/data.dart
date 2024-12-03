@@ -193,4 +193,14 @@ class Data {
       nameProduct: AllText.cleansing,
     ),
   ];
+
+  static const List<String> catalogMenuList = [
+    AllText.appointment,
+    AllText.typeOfVehicle,
+    AllText.typeOfSkin,
+    AllText.cosmeticsLine,
+    AllText.sets,
+    AllText.promotions,
+    AllText.consultationWithCosmetologist,
+  ];
 }

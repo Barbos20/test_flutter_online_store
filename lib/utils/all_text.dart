@@ -32,4 +32,12 @@ class AllText {
   static const forMoisturizing = 'Для увлажнения';
   static const forNourish = 'Для питания';
   static const forRejuvenation = 'Для омоложения';
+  static const search = 'Поиск';
+  static const appointment = 'Назначение';
+  static const typeOfVehicle = 'Тип спредства';
+  static const typeOfSkin = 'Тип кожи';
+  static const cosmeticsLine = 'Линия косметики';
+  static const consultationWithCosmetologist = 'Консультация \nс косметологом ';
+  static const createScheme = 'Составим схему идеального домашнего ухода';
+  static const tenQuestions = '10 вопросов о вашей коже';
 }
