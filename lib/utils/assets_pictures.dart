@@ -3,6 +3,7 @@ class AssetsPictures {
   static const magnifyingGlass = 'assets/icons/MagnifyingGlass.png';
   static const shoppingCartSimple = 'assets/icons/ShoppingCartSimple.png';
   static const user = 'assets/icons/User.png';
+  static const pinkPromotion = 'assets/icons/pinkPromotion.png';
   static const headLogo = 'assets/pictures/headLogo.png';
   static const background = 'assets/pictures/background/background.png';
   static const forBody = 'assets/pictures/body.png';
