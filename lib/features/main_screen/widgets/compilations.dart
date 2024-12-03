@@ -28,13 +28,15 @@ class Compilations extends StatelessWidget {
                   : _currentPaddingBetweenItems,
             ),
             child: InkWell(
+              borderRadius: BorderRadius.circular(12),
               onTap: () {},
               child: Column(
                 children: [
-                  Image.asset(
-                    compilation.picture,
+                  Ink.image(
+                    image: AssetImage(compilation.picture),
                     height: 72,
                     width: 72,
+                    fit: BoxFit.cover,
                   ),
                   const SizedBox(height: 8),
                   Text(

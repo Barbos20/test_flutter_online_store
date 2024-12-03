@@ -101,7 +101,7 @@ class NewProduct extends StatelessWidget {
                     children: [
                       Stack(
                         children: [
-                          Container(
+                          Ink(
                             height: 188,
                             width: 161,
                             decoration: BoxDecoration(
