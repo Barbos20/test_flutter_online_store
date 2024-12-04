@@ -27,9 +27,6 @@ class _RowSearchState extends State<RowSearch> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // SizedBox(
-        //   height: MediaQuery.of(context).padding.top,
-        // ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
