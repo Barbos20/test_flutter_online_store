@@ -10,7 +10,7 @@ class HomeCareScheme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const homeCare = Data.homeShcemetList;
+    final homeCare = Data.homeShcemetList;
     const double _currentPaddingBetweenItems = 6;
     const double _firstLastItemPadding = 12;
 

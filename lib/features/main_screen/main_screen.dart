@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:test_online_store/features/main_screen/view_model/main_screen_view_model.dart';
 import 'package:test_online_store/features/main_screen/widgets/buttons.dart';
 import 'package:test_online_store/features/main_screen/widgets/compilations.dart';
 import 'package:test_online_store/features/main_screen/widgets/home_care_scheme.dart';
 import 'package:test_online_store/features/main_screen/widgets/new_product.dart';
 import 'package:test_online_store/features/main_screen/widgets/offer_widget.dart';
 import 'package:test_online_store/utils/all_text.dart';
-import 'package:test_online_store/utils/data.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,6 +15,14 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MainScreen> {
+  late MainScreenViewModel viewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    viewModel = MainScreenViewModel();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -30,7 +38,7 @@ class _MyHomePageState extends State<MainScreen> {
             title: AllText.newProduct,
             stripColorStart: const Color(0xffE4FEF9),
             stripColorEnd: const Color(0xff66F6DC),
-            products: Data.newProductsList,
+            products: viewModel.latestProductsList,
           ),
           const SizedBox(height: 40.53),
           const HomeCareScheme(),
@@ -39,7 +47,7 @@ class _MyHomePageState extends State<MainScreen> {
             title: AllText.promotions,
             stripColorStart: const Color(0xffFFC0E1),
             stripColorEnd: const Color(0xffF02980),
-            products: Data.promotionsProductsList,
+            products: viewModel.promotionsProducts,
           ),
           const SizedBox(height: 41),
           const Buttons(),
@@ -48,7 +56,7 @@ class _MyHomePageState extends State<MainScreen> {
             title: AllText.hits,
             stripColorStart: const Color(0xffF86614),
             stripColorEnd: const Color(0xffFCBC5C),
-            products: Data.hitsProductsList,
+            products: viewModel.hitsProducts,
           ),
           const SizedBox(height: 50),
         ],

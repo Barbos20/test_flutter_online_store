@@ -20,6 +20,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
         padding: EdgeInsets.only(top: statusBarHeight),
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
               child: SingleChildScrollView(
