@@ -10,7 +10,7 @@ class ListMenuCatalog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const catalogMenuList = Data.catalogMenuList;
+    final catalogMenuList = Data.catalogMenuList;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(

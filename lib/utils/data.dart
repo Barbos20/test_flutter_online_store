@@ -1,10 +1,14 @@
 import 'package:test_online_store/features/catalog_screen/models/menu_modal.dart';
+import 'package:test_online_store/features/catalog_screen/models/sub_menu_modal.dart';
 import 'package:test_online_store/features/main_screen/models/compilation_model.dart';
 import 'package:test_online_store/features/main_screen/models/product_model.dart';
+import 'package:test_online_store/features/main_screen/view_model/main_screen_view_model.dart';
 import 'package:test_online_store/utils/all_text.dart';
 import 'package:test_online_store/utils/assets_pictures.dart';
 
 class Data {
+  static final _viewModel = MainScreenViewModel();
+
   static final List<ProductModel> productList = [
     ProductModel(
       picture: AssetsPictures.headLogo,
@@ -14,6 +18,8 @@ class Data {
       dateAddition: DateTime(2024, 10, 27),
       isPromotion: true,
       numberOrders: 12,
+      appointment: '',
+      typeOfSkin: '',
     ),
     ProductModel(
       picture: AssetsPictures.headLogo,
@@ -23,6 +29,8 @@ class Data {
       dateAddition: DateTime(2024, 10, 26),
       isPromotion: true,
       numberOrders: 12,
+      appointment: '',
+      typeOfSkin: '',
     ),
     ProductModel(
       picture: AssetsPictures.headLogo,
@@ -32,6 +40,8 @@ class Data {
       dateAddition: DateTime(2024, 10, 25),
       isPromotion: true,
       numberOrders: 12,
+      appointment: '',
+      typeOfSkin: '',
     ),
   ];
 
@@ -75,6 +85,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 14),
       isPromotion: false,
       numberOrders: 51,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.oilySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamRed2,
@@ -84,6 +96,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 13),
       isPromotion: false,
       numberOrders: 52,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.drySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamRed1,
@@ -93,6 +107,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 12),
       isPromotion: false,
       numberOrders: 55,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.normalSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamRed2,
@@ -102,6 +118,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 11),
       isPromotion: false,
       numberOrders: 53,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.combiSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamRed1,
@@ -111,6 +129,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 10),
       isPromotion: false,
       numberOrders: 54,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.drySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamPink1,
@@ -122,6 +142,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 19),
       isPromotion: true,
       numberOrders: 14,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.oilySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamPink2,
@@ -134,6 +156,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 18),
       isPromotion: true,
       numberOrders: 12,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.normalSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamPink1,
@@ -145,6 +169,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 17),
       isPromotion: true,
       numberOrders: 12,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.oilySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamPink2,
@@ -157,6 +183,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 16),
       isPromotion: true,
       numberOrders: 14,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.combiSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamPink1,
@@ -168,6 +196,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 15),
       isPromotion: true,
       numberOrders: 13,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.drySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamGreen2,
@@ -177,6 +207,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 24),
       isPromotion: false,
       numberOrders: 1,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.drySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamGreen1,
@@ -186,6 +218,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 23),
       isPromotion: false,
       numberOrders: 1,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.normalSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamGreen2,
@@ -195,6 +229,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 22),
       isPromotion: false,
       numberOrders: 1,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.combiSkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamGreen1,
@@ -204,6 +240,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 21),
       isPromotion: false,
       numberOrders: 1,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.oilySkin,
     ),
     ProductModel(
       picture: AssetsPictures.creamGreen2,
@@ -213,6 +251,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 20),
       isPromotion: false,
       numberOrders: 1,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.drySkin,
     ),
   ];
 
@@ -223,6 +263,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 9),
       isPromotion: false,
       numberOrders: 13,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.normalSkin,
     ),
     ProductModel(
       picture: AssetsPictures.cleansing,
@@ -230,6 +272,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 8),
       isPromotion: false,
       numberOrders: 12,
+      appointment: AllText.regeneration,
+      typeOfSkin: AllText.combiSkin,
     ),
     ProductModel(
       picture: AssetsPictures.serum,
@@ -237,6 +281,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 7),
       isPromotion: false,
       numberOrders: 33,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.oilySkin,
     ),
     ProductModel(
       picture: AssetsPictures.day_cream,
@@ -244,6 +290,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 6),
       isPromotion: false,
       numberOrders: 23,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.normalSkin,
     ),
     ProductModel(
       picture: AssetsPictures.demakage,
@@ -251,6 +299,8 @@ class Data {
       dateAddition: DateTime(2024, 11, 5),
       isPromotion: false,
       numberOrders: 41,
+      appointment: AllText.cleansing,
+      typeOfSkin: AllText.combiSkin,
     ),
     ProductModel(
       picture: AssetsPictures.cleansing,
@@ -258,20 +308,34 @@ class Data {
       dateAddition: DateTime(2024, 11, 4),
       isPromotion: false,
       numberOrders: 23,
+      appointment: AllText.humidification,
+      typeOfSkin: AllText.oilySkin,
     ),
   ];
 
-  static const List<MenuModal> catalogMenuList = [
+  static List<MenuModal> catalogMenuList = [
     MenuModal(
       title: AllText.byAppointment,
       nameType: AllText.appointment,
       listSubtitle: [
-        AllText.cleansing,
-        AllText.humidification,
-        AllText.regeneration,
+        SubMenuModal(
+          name: AllText.cleansing,
+          forWhat: AllText.vehicleForCleansing,
+          products: getProductsByMenu(AllText.cleansing),
+        ),
+        SubMenuModal(
+          name: AllText.humidification,
+          forWhat: AllText.vehicleForHumidification,
+          products: getProductsByMenu(AllText.humidification),
+        ),
+        SubMenuModal(
+          name: AllText.regeneration,
+          forWhat: AllText.vehicleForRegeneration,
+          products: getProductsByMenu(AllText.regeneration),
+        ),
       ],
     ),
-    MenuModal(
+    const MenuModal(
       title: AllText.byTypeOfVehicle,
       nameType: AllText.typeOfVehicle,
       listSubtitle: [],
@@ -280,31 +344,55 @@ class Data {
       title: AllText.byTypeOfSkin,
       nameType: AllText.typeOfSkin,
       listSubtitle: [
-        AllText.oilySkin,
-        AllText.combiSkin,
-        AllText.normalSkin,
-        AllText.drySkin,
-        AllText.anyType,
+        SubMenuModal(
+          name: AllText.oilySkin,
+          forWhat: AllText.vehicleForOily,
+          products: getProductsByMenu(AllText.oilySkin),
+        ),
+        SubMenuModal(
+          name: AllText.combiSkin,
+          forWhat: AllText.vehicleForCombi,
+          products: getProductsByMenu(AllText.combiSkin),
+        ),
+        SubMenuModal(
+          name: AllText.normalSkin,
+          forWhat: AllText.vehicleForNormal,
+          products: getProductsByMenu(AllText.normalSkin),
+        ),
+        SubMenuModal(
+          name: AllText.drySkin,
+          forWhat: AllText.vehicleForDry,
+          products: getProductsByMenu(AllText.drySkin),
+        ),
+        SubMenuModal(
+          name: AllText.anyType,
+          forWhat: AllText.vehicleForAny,
+          products: getProductsByMenu(AllText.anyType),
+        ),
       ],
     ),
-    MenuModal(
+    const MenuModal(
       title: AllText.byCosmeticsLine,
       nameType: AllText.cosmeticsLine,
       listSubtitle: [],
     ),
-    MenuModal(
+    const MenuModal(
       title: AllText.bySets,
       nameType: AllText.sets,
       listSubtitle: [],
     ),
-    MenuModal(
+    const MenuModal(
       title: AllText.byPromotions,
       nameType: AllText.promotions,
       listSubtitle: [],
     ),
-    MenuModal(
+    const MenuModal(
       nameType: AllText.consultationWithCosmetologist,
       listSubtitle: [],
     ),
   ];
+
+  static List<ProductModel> getProductsByMenu(String menu) {
+    return _viewModel.sortByMenu(menu);
+  }
 }

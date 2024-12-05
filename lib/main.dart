@@ -48,10 +48,16 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
+        ),
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: Scaffold(
         body: _screens[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,
           currentIndex: _currentIndex,
           onTap: _onTabTapped,
           type: BottomNavigationBarType.fixed,

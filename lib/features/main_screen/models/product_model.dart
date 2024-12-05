@@ -5,6 +5,8 @@ class ProductModel {
     required this.dateAddition,
     required this.isPromotion,
     required this.numberOrders,
+    required this.appointment,
+    required this.typeOfSkin,
     this.promotionPicture,
     this.productDescription,
     this.offerDescription,
@@ -24,4 +26,6 @@ class ProductModel {
   final int? promotionPrice;
   final int? correctPrice;
   final String? doubleOffer;
+  final String appointment;
+  final String typeOfSkin;
 }
