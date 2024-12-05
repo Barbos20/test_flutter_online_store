@@ -7,6 +7,10 @@ class AllText {
     return 'Скидка -$number%';
   }
 
+  static String countProducts(int number) {
+    return '$number продуктов';
+  }
+
   static const serum = 'Сыворотка';
   static const serumDescription = 'HA EYE & NECK SERUM';
   static const goToPromotion = 'Перейти к акции';
@@ -37,7 +41,7 @@ class AllText {
   static const search = 'Поиск';
   static const appointment = 'Назначение';
   static const byAppointment = 'По назначению';
-  static const typeOfVehicle = 'Тип сåредства';
+  static const typeOfVehicle = 'Тип средства';
   static const byTypeOfVehicle = 'По типу средства';
   static const typeOfSkin = 'Тип кожи';
   static const byTypeOfSkin = 'По типу кожи';
@@ -53,5 +57,13 @@ class AllText {
   static const anyType = 'Лубой тип';
   static const humidification = 'Увлажнение';
   static const regeneration = 'Регенирация';
-  static const vehicleForOilySkin = 'Средства для жирной кожи';
+  static const vehicleForCleansing = 'Средства для очищения кожи';
+  static const vehicleForHumidification = 'Средства для увлажнения кожи';
+  static const vehicleForRegeneration = 'Средства для регенирации кожи';
+  static const vehicleForOily = 'Средства для жирной кожи';
+  static const vehicleForCombi = 'Средства для комбинированых типов кожи';
+  static const vehicleForNormal = 'Средства для нормального типа кожи';
+  static const vehicleForDry = 'Средства для сухой кожи';
+  static const vehicleForAny = 'Средства для любого типа кожи';
+  static const all = 'Все';
 }

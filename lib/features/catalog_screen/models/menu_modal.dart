@@ -1,3 +1,5 @@
+import 'package:test_online_store/features/catalog_screen/models/sub_menu_modal.dart';
+
 class MenuModal {
   const MenuModal({
     this.title,
@@ -7,5 +9,5 @@ class MenuModal {
 
   final String? title;
   final String nameType;
-  final List<String> listSubtitle;
+  final List<SubMenuModal> listSubtitle;
 }
